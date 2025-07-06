@@ -28,17 +28,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+   
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "npm i && npm rebuild bcrypt --build-from-source",
-    "postinstall": "npm rebuild bcrypt --build-from-source",
-    "prepare-deployment": "node scripts/prepare-deployment.js",
-    "fix-bcrypt": "node scripts/prepare-deployment.js",
-    "fix-bcrypt-unix": "chmod +x scripts/fix-bcrypt.sh && ./scripts/fix-bcrypt.sh",
-    "fix-bcrypt-windows": "scripts\\fix-bcrypt.bat",
-    "test-bcrypt": "node scripts/test-bcrypt.js",
-    "rebuild-native": "npm rebuild bcrypt --build-from-source"
+    
   },
   "keywords": [],
   "author": "",
