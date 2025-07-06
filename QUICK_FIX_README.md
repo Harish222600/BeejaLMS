@@ -30,9 +30,15 @@ Error: /opt/render/project/src/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_li
 
 ### Platform-Specific Instructions:
 
-#### Render
-- Your current `package.json` should work automatically
-- The `build` script will rebuild bcrypt during deployment
+#### Render (Updated Solution)
+1. **Use the provided `render.yaml` file** (✅ Created!)
+2. **In your Render dashboard:**
+   - Set Build Command: `npm ci && npm rebuild bcrypt --build-from-source`
+   - Set Start Command: `npm start`
+   - Set Environment Variable: `NPM_CONFIG_PRODUCTION=false`
+3. **Alternative: Manual Settings**
+   - Build Command: `npm run build`
+   - Start Command: `npm start`
 
 #### Heroku
 - Add this to your `package.json` (already added):
